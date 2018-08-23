@@ -50,6 +50,13 @@
 					</Collection>
 				</Annotation>
 			</Annotations>
+			<Annotations Target="CatalogService.Orders">
+				<Annotation Term="UI.Chart">
+					<Record Type="UI.ChartDefinitionType">
+						<PropertyValue Property="ChartType" Path="amount"/>
+					</Record>
+				</Annotation>
+			</Annotations>
 		</Schema>
 	</edmx:DataServices>
 </edmx:Edmx>
