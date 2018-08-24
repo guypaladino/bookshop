@@ -1,0 +1,38 @@
+{
+	"fileName": "id_1535050754217_100_propertyChange",
+	"fileType": "change",
+	"changeType": "propertyChange",
+	"reference": "app.Component",
+	"packageName": "$TMP",
+	"content": {
+		"property": "popinHAlign",
+		"newValue": "Center"
+	},
+	"selector": {
+		"id": "app::sap.suite.ui.generic.template.AnalyticalListPage.view.AnalyticalListPage::Books--table-ID",
+		"type": "sap.m.Column",
+		"idIsLocal": false
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/app/changes/",
+	"projectId": "app",
+	"creation": "2018-08-23T18:59:39.421Z",
+	"originalLanguage": "EN",
+	"conditions": {},
+	"context": "",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.56.5",
+		"compositeCommand": ""
+	},
+	"dependentSelector": {},
+	"validAppVersions": {
+		"creation": "1.0.0",
+		"from": "1.0.0",
+		"to": "1.0.0"
+	},
+	"jsOnly": false
+}
