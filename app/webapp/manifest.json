@@ -127,8 +127,12 @@
 					"list": true,
 					"settings": {
 						"gridTable": false,
+						"defaultContentView": "charttable",
+						"tableTable": "AnalyticalTable",
+						"condensedTableLayout": true,
+						"defaultFilterMode": "visual", 
 						"multiSelect": false,
-						"autoHide": true,
+						"autoHide": false,
 						"showGoButtonOnFilterBar": false,
 						"condensedTableLayout": true,
 						"keyPerformanceIndicators": {}
