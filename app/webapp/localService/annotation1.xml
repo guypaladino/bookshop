@@ -31,7 +31,9 @@
 			<Annotations Target="CatalogService.Books">
 				<Annotation Term="UI.SelectionPresentationVariant">
 					<Record Type="UI.SelectionPresentationVariantType">
-						<PropertyValue Property="SelectionVariant"/>
+						<PropertyValue Property="SelectionVariant">
+							<Record Type="UI.SelectionVariantType"/>
+						</PropertyValue>
 						<PropertyValue Property="PresentationVariant"/>
 					</Record>
 				</Annotation>
@@ -81,24 +83,6 @@
 						</PropertyValue>
 					</Record>
 				</Annotation>
-				<Annotation Term="UI.DataPoint" Qualifier="AuthorId">
-					<Record Type="UI.DataPointType">
-						<PropertyValue Property="Title" String="{@i18n&gt;AUTHOR_ID_}"/>
-						<PropertyValue Property="Value" Path="author_ID"/>
-					</Record>
-				</Annotation>
-				<Annotation Term="UI.DataPoint" Qualifier="Title">
-					<Record Type="UI.DataPointType">
-						<PropertyValue Property="Title" String="{@i18n&gt;TITLE}"/>
-						<PropertyValue Property="Value" Path="title"/>
-					</Record>
-				</Annotation>
-				<Annotation Term="UI.DataPoint" Qualifier="Id">
-					<Record Type="UI.DataPointType">
-						<PropertyValue Property="Title" String="{@i18n&gt;IDENTIFICATION}"/>
-						<PropertyValue Property="Value" Path="ID"/>
-					</Record>
-				</Annotation>
 				<Annotation Term="UI.DataPoint" Qualifier="Stock">
 					<Record Type="UI.DataPointType">
 						<PropertyValue Property="Title" String="{@i18n&gt;STOCK_NUMBER}"/>
@@ -117,7 +101,7 @@
 				<!-- -->
 				<Annotation Term="UI.Chart" Qualifier="Default">
 					<Record Type="UI.ChartDefinitionType">
-						<PropertyValue Property="ChartType" EnumMember="UI.ChartType/Column"/>
+						<PropertyValue Property="ChartType" EnumMember="UI.ChartType/Bar"/>
 						<PropertyValue Property="Title" String="{@i18n&gt;CHART_TITLE}"/>
 						<PropertyValue Property="Description" String="{@i18n&gt;COLUMN_CHART_FOR_BOOKS}"/>
 						<PropertyValue Property="Measures">

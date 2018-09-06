@@ -117,10 +117,10 @@
 						"defaultContentView": "charttable",
 						"tableTable": "AnalyticalTable",
 						"qualifier": "DefaultPresentationVariant",
-						"condensedTableLayout": true,
-						"defaultFilterMode": "visual",
+						"condensedTableLayout": false,
+						"defaultFilterMode": "compact",
 						"multiSelect": false,
-						"autoHide": false,
+						"autoHide": true,
 						"showGoButtonOnFilterBar": false,
 						"keyPerformanceIndicators": {}
 					}
