@@ -18,17 +18,7 @@
 				"type": "OData",
 				"settings": {
 					"localUri": "localService/metadata.xml",
-					"annotations": [
-						"annotation0",
-						"annotation1"
-					]
-				}
-			},
-			"annotation0": {
-				"type": "ODataAnnotation",
-				"uri": "localService/annotation0.xml",
-				"settings": {
-					"localUri": "localService/annotation0.xml"
+					"annotations": ["annotation1"]
 				}
 			},
 			"annotation1": {
@@ -60,10 +50,7 @@
 			"tablet": false,
 			"phone": false
 		},
-		"supportedThemes": [
-			"sap_hcb",
-			"sap_belize"
-		]
+		"supportedThemes": ["sap_hcb", "sap_belize"]
 	},
 	"sap.ui5": {
 		"resources": {
@@ -126,15 +113,14 @@
 					"name": "sap.suite.ui.generic.template.AnalyticalListPage",
 					"list": true,
 					"settings": {
-						"gridTable": false,
+						"gridTable": true,
 						"defaultContentView": "charttable",
 						"tableTable": "AnalyticalTable",
 						"condensedTableLayout": true,
-						"defaultFilterMode": "visual", 
+						"defaultFilterMode": "visual",
 						"multiSelect": false,
 						"autoHide": false,
 						"showGoButtonOnFilterBar": false,
-						"condensedTableLayout": true,
 						"keyPerformanceIndicators": {}
 					}
 				},
