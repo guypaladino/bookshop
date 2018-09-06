@@ -29,6 +29,11 @@
 	<edmx:DataServices>
 		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm">
 			<Annotations Target="CatalogService.Books">
+				<Annotation Term="UI.SelectionVariant">
+					<Record Type="UI.SelectionVariantType">
+						<PropertyValue Property="Text" String="{@i18n&gt;DEFAULT}"/>
+					</Record>
+				</Annotation>
 				<Annotation Term="UI.SelectionFields">
 					<Collection>
 						<PropertyPath>title</PropertyPath>
@@ -144,22 +149,22 @@
 						<Record Type="UI.DataField">
 							<PropertyValue Property="Value" Path="ID"/>
 							<PropertyValue Property="Label" String="{@i18n&gt;IDENTIFICATION}"/>
-							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
 						</Record>
 						<Record Type="UI.DataField">
 							<PropertyValue Property="Value" Path="title"/>
 							<PropertyValue Property="Label" String="{@i18n&gt;TITLE}"/>
-							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
 						</Record>
 						<Record Type="UI.DataField">
 							<PropertyValue Property="Value" Path="stock"/>
 							<PropertyValue Property="Label" String="{@i18n&gt;STOCK}"/>
-							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
 						</Record>
 						<Record Type="UI.DataField">
 							<PropertyValue Property="Value" Path="author_ID"/>
 							<PropertyValue Property="Label" String="{@i18n&gt;AUTHOR_IDENTIFICATION}"/>
-							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
 						</Record>
 					</Collection>
 				</Annotation>
