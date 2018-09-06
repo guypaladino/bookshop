@@ -116,7 +116,7 @@
 						"gridTable": true,
 						"defaultContentView": "charttable",
 						"tableTable": "AnalyticalTable",
-						"qualifier": "DefaultPresentationVariant",
+						"qualifier": "DefaultVariant",
 						"condensedTableLayout": false,
 						"defaultFilterMode": "compact",
 						"multiSelect": false,

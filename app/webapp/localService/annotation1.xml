@@ -29,15 +29,44 @@
 	<edmx:DataServices>
 		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm">
 			<Annotations Target="CatalogService.Books">
-				<Annotation Term="UI.SelectionPresentationVariant">
+				<Annotation Term="UI.SelectionPresentationVariant" Qualifier="DefaultVariant">
 					<Record Type="UI.SelectionPresentationVariantType">
 						<PropertyValue Property="SelectionVariant">
-							<Record Type="UI.SelectionVariantType"/>
+							<Record Type="UI.SelectionVariantType">
+								<PropertyValue Property="Text" String="Selection Variant"/>
+							</Record>
 						</PropertyValue>
-						<PropertyValue Property="PresentationVariant"/>
+						<PropertyValue Property="PresentationVariant">
+							<Record Type="UI.PresentationVariantType">
+								<PropertyValue Property="MaxItems" Int="10"/>
+								<PropertyValue Property="SortOrder">
+									<Collection>
+										<Record Type="Common.SortOrderType">
+											<PropertyValue Property="Property" PropertyPath="stock"/>
+											<PropertyValue Property="Descending" Bool="true"/>
+										</Record>
+									</Collection>
+								</PropertyValue>
+								<PropertyValue Property="Visualizations">
+									<Collection>
+										<AnnotationPath>@UI.LineItem#Default</AnnotationPath>
+										<AnnotationPath>@UI.Chart#Default</AnnotationPath>
+									</Collection>
+								</PropertyValue>
+							</Record>
+						</PropertyValue>
+						<PropertyValue Property="Text" String="Selection Presentation Varaint"/>
 					</Record>
 				</Annotation>
-				<Annotation Term="UI.SelectionVariant">
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ID"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.SelectionVariant" Qualifier="DefaultSelectionVariant">
 					<Record Type="UI.SelectionVariantType">
 						<PropertyValue Property="Text" String="{@i18n&gt;DEFAULT}"/>
 					</Record>
@@ -59,11 +88,6 @@
 								</Record>
 							</Collection>
 						</PropertyValue>
-						<PropertyValue Property="GroupBy">
-							<Collection>
-								<PropertyPath>title</PropertyPath>
-							</Collection>
-						</PropertyValue>
 						<PropertyValue Property="Visualizations">
 							<Collection>
 								<AnnotationPath>@UI.LineItem#Default</AnnotationPath>
@@ -78,7 +102,7 @@
 						<PropertyValue Property="TypeNamePlural" String="{@i18n&gt;appTitle}"/>
 						<PropertyValue Property="Title">
 							<Record Type="UI.DataField">
-								<PropertyValue Property="Value" String="Book Details"/>
+								<PropertyValue Property="Value" Path="ID"/>
 							</Record>
 						</PropertyValue>
 					</Record>
@@ -94,8 +118,6 @@
 							</Record>
 						</PropertyValue>
 						<PropertyValue Property="Description" String="{@i18n&gt;NUMBER_OF_BOOKS_IN_STOCK}"/>
-						<PropertyValue Property="MinimumValue" Decimal="0"/>
-						<PropertyValue Property="MaximumValue" Decimal="1000"/>
 					</Record>
 				</Annotation>
 				<!-- -->
@@ -104,6 +126,19 @@
 						<PropertyValue Property="ChartType" EnumMember="UI.ChartType/Bar"/>
 						<PropertyValue Property="Title" String="{@i18n&gt;CHART_TITLE}"/>
 						<PropertyValue Property="Description" String="{@i18n&gt;COLUMN_CHART_FOR_BOOKS}"/>
+						<PropertyValue Property="Dimensions">
+							<Collection>
+								<PropertyPath>title</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="DimensionAttributes">
+							<Collection>
+								<Record Type="UI.ChartDimensionAttributeType">
+									<PropertyValue Property="Dimension" PropertyPath="title"/>
+									<PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
 						<PropertyValue Property="Measures">
 							<Collection>
 								<PropertyPath>stock</PropertyPath>
@@ -115,19 +150,6 @@
 									<PropertyValue Property="Measure" PropertyPath="stock"/>
 									<PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
 									<PropertyValue Property="DataPoint" AnnotationPath="@UI.DataPoint#Stock"/>
-								</Record>
-							</Collection>
-						</PropertyValue>
-						<PropertyValue Property="Dimensions">
-							<Collection>
-								<PropertyPath>title</PropertyPath>
-							</Collection>
-						</PropertyValue>
-						<PropertyValue Property="DimensionAttributes">
-							<Collection>
-								<Record Type="UI.ChartDimensionAttributeType">
-									<PropertyValue Property="Dimension" PropertyPath="title"/>
-									<PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category"/>
 								</Record>
 							</Collection>
 						</PropertyValue>
