@@ -29,6 +29,12 @@
 	<edmx:DataServices>
 		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm">
 			<Annotations Target="CatalogService.Books">
+				<Annotation Term="UI.SelectionPresentationVariant">
+					<Record Type="UI.SelectionPresentationVariantType">
+						<PropertyValue Property="SelectionVariant"/>
+						<PropertyValue Property="PresentationVariant"/>
+					</Record>
+				</Annotation>
 				<Annotation Term="UI.SelectionVariant">
 					<Record Type="UI.SelectionVariantType">
 						<PropertyValue Property="Text" String="{@i18n&gt;DEFAULT}"/>
